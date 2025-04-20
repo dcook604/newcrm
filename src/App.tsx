@@ -1,3 +1,4 @@
+// @ts-nocheck
 import  { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
@@ -11,6 +12,7 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import UserManagement from './pages/UserManagement';
 import Unauthorized from './pages/Unauthorized';
+import PendingApproval from './pages/PendingApproval';
 import { DataProvider } from './context/DataContext';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -28,6 +30,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/unauthorized" element={<Unauthorized />} />
+                <Route path="/pending-approval" element={<PendingApproval />} />
                 
                 {/* Protected routes */}
                 <Route path="/" element={

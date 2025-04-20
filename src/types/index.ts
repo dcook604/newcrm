@@ -41,6 +41,7 @@ export interface User {
   password: string;
   name: string;
   role: 'admin' | 'manager' | 'viewer';
+  approved: boolean;
   createdAt: string;
 }
  

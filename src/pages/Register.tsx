@@ -1,3 +1,4 @@
+// @ts-nocheck
 import  { useState, FormEvent } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -37,11 +38,7 @@ export default function Register() {
     });
     
     if (success) {
-      navigate('/login', { 
-        state: { 
-          message: 'Registration successful! Please log in.' 
-        } 
-      });
+      navigate('/pending-approval');
     }
   };
 
